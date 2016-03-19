@@ -32,6 +32,7 @@
  * [Running tests](#running-tests)
   * [Building test programs](#building-test-programs)
   * [Running test programs](#running-test-programs)
+ * [Old commit histories](#old-commit-histories)
  * [License](#license)
 
 # Features
@@ -677,6 +678,9 @@ $ ./dtl_test --gtest_filter='Strdifftest.*'
 `--gtest-filters` is the function of googletest. googletest has many useful functions for testing software flexibly.
 If you want to know other functions of googletest, run `./dtl_test --help`.
 
+# Old commit histories
+
+Please see [cubicdaiya/dtl-legacy](https://github.com/cubicdaiya/dtl-legacy).
 
 # License
 
