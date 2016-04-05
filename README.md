@@ -382,7 +382,7 @@ Because that the calculation of LCS and SES needs massive amounts of memory when
 
 The program uses that algorithm don't consider that will burst in the worst case.
 
-`dtl` avoids above-described problem by dividing each sequence into plural subsequences and joining the difference of each subsequence finally.(This feature is supported after version 0.04)
+`dtl` avoids above-described problem by dividing each sequence into plural subsequences and joining the difference of each subsequence finally. (This feature is supported after version 0.04)
 
 ## Implementations with various programming languages
 
