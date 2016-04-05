@@ -393,7 +393,7 @@ https://github.com/cubicdaiya/onp
 # Examples
 
 There are examples in [dtl/examples](https://github.com/cubicdaiya/dtl/tree/master/examples).
-`dtl` uses SCons for building examples and tests. If you build and run examples and tests, install SCons.
+`dtl` uses [SCons](http://scons.org/) for building examples and tests. If you build and run examples and tests, install SCons.
 
 ## strdiff
 
