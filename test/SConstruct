@@ -19,7 +19,7 @@ if not conf.CheckCXX():
     print "c++ compiler is not installed!"
     Exit(1)
 
-libs = ['stdc++', 'pthread', 'libgtest']
+libs = ['stdc++', 'pthread', 'gtest']
 for lib in libs:
     if not conf.CheckLib(lib):
         print "library " + lib + " not installed!"
