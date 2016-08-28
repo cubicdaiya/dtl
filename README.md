@@ -273,7 +273,7 @@ For this example, "abc" is translated to "abd" with the Unified Format block bel
 
 When compare two large sequences, `dtl` can optimizes the calculation of difference with the onHuge function.
 
-But this function is could use when the compared data type is std::vector.
+This function is available when the compared data type is std::vector.
 
 When you use this function, you may call this function before calling compose function.
 
