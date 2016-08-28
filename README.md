@@ -650,14 +650,14 @@ $
 
 # Running tests
 
-`dtl` uses [googletest](http://code.google.com/p/googletest/) and [SCons](http://www.scons.org/) with testing dtl-self.
+`dtl` uses [googletest](https://github.com/google/googletest) and [SCons](http://www.scons.org/) with testing dtl-self.
 
 # Building test programs
 
 If you build test programs for `dtl`, run `scons` in test direcotry.
 
 ```bash
-$ GTEST_ROOT=${gtest_root_dir} scons
+$ scons
 ```
 
 # Running test programs
@@ -665,7 +665,7 @@ $ GTEST_ROOT=${gtest_root_dir} scons
 If you run all tests for `dtl`, run 'scons check' in test direcotry. (it is necessary that gtest is compiled)
 
 ```bash
-$ GTEST_ROOT=${gtest_root_dir} scons check
+$ scons check
 ```
 
 If you run sectional tests, you may exeucte `dtl_test` directly after you run `scons`.
