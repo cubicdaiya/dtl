@@ -16,13 +16,13 @@ env  = Environment(
 conf = Configure(env);
 
 if not conf.CheckCXX():
-    print "c++ compiler is not installed!"
+    print("c++ compiler is not installed!")
     Exit(1)
 
 libs = ['stdc++', 'pthread', 'gtest']
 for lib in libs:
     if not conf.CheckLib(lib):
-        print "library " + lib + " not installed!"
+        print("library " + lib + " not installed!")
         Exit(1)
 
 conf.Finish()
