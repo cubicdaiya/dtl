@@ -1,19 +1,14 @@
-
 #include <dtl/dtl.hpp>
 #include "common.hpp"
 #include <iostream>
 #include <sstream>
 #include <string>
 
+#include "printers.hpp"
+
 using namespace std;
 
 using dtl::Diff;
-using dtl::SES_ADD;
-using dtl::SES_DELETE;
-using dtl::SES_COMMON;
-using dtl::Printer;
-
-#include "printers.hpp"
 
 int main(int argc, char *argv[]){
     
