@@ -26,17 +26,18 @@ for lib in libs:
 
 conf.Finish()
 
-targets = { 'strdiff'    : ['strdiff.cpp',    'common.cpp'], # diff between two string sequences
-            'intdiff'    : ['intdiff.cpp'],                  # diff between two integer sequences
-            'unidiff'    : ['unidiff.cpp',    'common.cpp'], # unified diff between two files
-            'unistrdiff' : ['unistrdiff.cpp', 'common.cpp'], # unified diff between two strings
-            'bdiff'      : ['bdiff.cpp',      'common.cpp'], # diff between two byte sequences
-            'strdiff3'   : ['strdiff3.cpp',   'common.cpp'], # three-way string diff program using dtl
-            'intdiff3'   : ['intdiff3.cpp'],                 # three-way integer diff program using dtl
-            'patch'      : ['patch.cpp',      'common.cpp'], # string patch program using dtl
-            'fpatch'     : ['fpatch.cpp',     'common.cpp'], # file patch program using dtl
-            'st2ses'     : ['st2ses.cpp',     'common.cpp'], # convert SES format file to SES instance
-            'strdiff_cp' : ['strdiff_cp.cpp', 'common.cpp'], # diff between two string sequences with custom printer
+targets = { 'strdiff'         : ['strdiff.cpp',         'common.cpp'], # diff between two string sequences
+            'intdiff'         : ['intdiff.cpp'],                       # diff between two integer sequences
+            'unidiff'         : ['unidiff.cpp',         'common.cpp'], # unified diff between two files
+            'unistrdiff'      : ['unistrdiff.cpp',      'common.cpp'], # unified diff between two strings
+            'bdiff'           : ['bdiff.cpp',           'common.cpp'], # diff between two byte sequences
+            'strdiff3'        : ['strdiff3.cpp',        'common.cpp'], # three-way string diff program using dtl
+            'intdiff3'        : ['intdiff3.cpp'],                      # three-way integer diff program using dtl
+            'patch'           : ['patch.cpp',           'common.cpp'], # string patch program using dtl
+            'fpatch'          : ['fpatch.cpp',          'common.cpp'], # file patch program using dtl
+            'st2ses'          : ['st2ses.cpp',          'common.cpp'], # convert SES format file to SES instance
+            'strdiff_cp'      : ['strdiff_cp.cpp',      'common.cpp'], # diff between two string sequences with custom printer
+            'strdiff_storage' : ['strdiff_storage.cpp', 'common.cpp'], # diff between two string sequences with custom storage
             }
 
 [ env.Program(target, targets[target]) for target in targets ]
