@@ -340,6 +340,15 @@ namespace dtl {
             sesElemVec ses_v = ses.getSequence ();
             for_each (ses_v.begin (), ses_v.end(), PT < sesElem, stream > (out));
         }
+
+        /**
+         * store difference between A and B as an SES with custom storage
+         */
+        template < typename storedData, template < typename SEET, typename STRT > class ST >
+        void storeSES(storedData& sd) const {
+            sesElemVec ses_v = ses.getSequence();
+            for_each(ses_v.begin(), ses_v.end(), ST < sesElem, storedData >(sd));
+        }
         
         /**
          * print difference between A and B in the Unified Format

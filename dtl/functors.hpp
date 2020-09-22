@@ -118,6 +118,20 @@ namespace dtl {
     private :
         stream& out_;
     };
+
+    /**
+     * storage class template
+     */
+    template <typename sesElem, typename storedData >
+    class Storage
+    {
+    public:
+        Storage(storedData& sd) : storedData_(sd) {}
+        virtual ~Storage() {}
+        virtual void operator() (const sesElem& se) const = 0;
+    protected:
+        storedData& storedData_;
+    };
     
     /**
      * compare class template
