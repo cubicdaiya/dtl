@@ -2,6 +2,9 @@ language: cpp
 compiler:
   - gcc
   - clang
+arch:
+  - amd64
+  - ppc64le
 before_script:
   - sudo apt-get install -y cmake scons
   - wget https://github.com/google/googletest/archive/release-1.8.0.zip
