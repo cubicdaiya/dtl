@@ -253,7 +253,7 @@ dtl::Diff<elem, sequence> d(A, B);
 d.compose();
 d.composeUnifiedHunks()
 string s1(A);
-string s2 = d.UniPatch(s1);
+string s2 = d.uniPatch(s1);
 ```
 
 When the above code is run, s2 becomes "abd".
