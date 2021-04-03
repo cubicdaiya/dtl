@@ -9,6 +9,7 @@ examples/intdiff3
 examples/patch
 examples/fpatch
 examples/st2ses
+examples/strdiff_storage
 test/strdiff3_test
 test/*/*/*_
 *.o
