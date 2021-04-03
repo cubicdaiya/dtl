@@ -15,13 +15,13 @@ if os.sys.platform != "win32":
 conf = Configure(env);
 
 if not conf.CheckCXX():
-    print "The C++ compiler is not installed!"
+    print("The C++ compiler is not installed!")
     Exit(1)
 
 libs = ['stdc++']
 for lib in libs:
     if not conf.CheckLib(lib):
-        print "library " + lib + " not installed!"
+        print("library " + lib + " not installed!")
         Exit(1)
 
 conf.Finish()
