@@ -1,3 +1,9 @@
+2022-04-11 Tatsuhiko Kubo <cubicdaiya@gmail.com>
+
+	* bugfix: fixed invalid offset in unified format difference when difference is too large.
+
+	* 1.20 released
+
 2015-05-03 Tatsuhiko Kubo <cubicdaiya@gmail.com>
 
 	* added some minor changes.
