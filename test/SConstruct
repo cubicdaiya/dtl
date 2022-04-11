@@ -11,6 +11,7 @@ def path_chomp(path):
 env  = Environment(
     CPPFLAGS=['-Wall', '-O2'],
     CPPPATH=['..'],
+	CXXFLAGS="-std=c++11",
 )
 
 conf = Configure(env);
