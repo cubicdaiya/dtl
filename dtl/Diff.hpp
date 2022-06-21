@@ -380,7 +380,7 @@ namespace dtl {
         /**
          * compose Unified Format Hunks from Shortest Edit Script
          */
-        void composeUnifiedHunks () {
+        void composeUnifiedHunks (const long long separateSize = 3, const long long contextSize = 3) {
             sesElemVec         common[2];
             sesElemVec         change;
             sesElemVec         ses_v  = ses.getSequence();
@@ -428,7 +428,7 @@ namespace dtl {
                 case SES_COMMON :
                     ++b;++d;
                     if (common[1].empty() && adds.empty() && deletes.empty() && change.empty()) {
-                        if (static_cast<long long>(common[0].size()) < DTL_CONTEXT_SIZE) {
+                        if (static_cast<long long>(common[0].size()) < contextSize) {
                             if (a == 0 && c == 0) {
                                 if (!wasSwapped()) {
                                     a = einfo.beforeIdx;
@@ -452,7 +452,7 @@ namespace dtl {
                         joinSesVec(change, deletes);
                         joinSesVec(change, adds);
                         change.push_back(*it);
-                        if (middle >= DTL_SEPARATE_SIZE || l_cnt >= length) {
+                        if (middle >= separateSize || l_cnt >= length) {
                             isAfter = true;
                         }
                         adds.clear();
@@ -467,26 +467,26 @@ namespace dtl {
                 if (isAfter && !change.empty()) {
                     sesElemVec_iter cit = it;
                     long long       cnt = 0;
-                    for (long long i=0;i<DTL_SEPARATE_SIZE && (cit != ses_v.end());++i, ++cit) {
+                    for (long long i=0;i<separateSize && (cit != ses_v.end());++i, ++cit) {
                         if (cit->second.type == SES_COMMON) {
                             ++cnt;
                         }
                     }
-                    if (cnt < DTL_SEPARATE_SIZE && l_cnt < length) {
+                    if (cnt < separateSize && l_cnt < length) {
                         middle = 0;
                         isAfter = false;
                         continue;
                     }
-                    if (static_cast<long long>(common[0].size()) >= DTL_SEPARATE_SIZE) {
+                    if (static_cast<long long>(common[0].size()) >= separateSize) {
                         long long c0size = static_cast<long long>(common[0].size());
                         rotate(common[0].begin(), 
-                               common[0].begin() + (size_t)c0size - DTL_SEPARATE_SIZE, 
+                               common[0].begin() + (size_t)c0size - separateSize,
                                common[0].end());
-                        for (long long i=0;i<c0size - DTL_SEPARATE_SIZE;++i) {
+                        for (long long i=0;i<c0size - separateSize;++i) {
                             common[0].pop_back();
                         }
-                        a += c0size - DTL_SEPARATE_SIZE;
-                        c += c0size - DTL_SEPARATE_SIZE;
+                        a += c0size - separateSize;
+                        c += c0size - separateSize;
                     }
                     if (a == 0) ++a;
                     if (c == 0) ++c;

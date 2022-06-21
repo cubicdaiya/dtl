@@ -92,9 +92,6 @@ namespace dtl {
         }
     } elemInfo;
     
-    const long long DTL_SEPARATE_SIZE = 3;
-    const long long DTL_CONTEXT_SIZE  = 3;
-    
     /**
      * cordinate for registering route
      */
