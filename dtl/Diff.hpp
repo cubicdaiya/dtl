@@ -283,7 +283,7 @@ namespace dtl {
             
             editDistance += static_cast<long long>(delta) + 2 * p;
             long long r = path[delta+offset];
-            P cordinate;
+            P cordinate = {};
             editPathCordinates epc(0);
             
             // recording edit distance only
@@ -561,6 +561,8 @@ namespace dtl {
             trivial          = false;
             editDistanceOnly = false;
             fp               = NULL;
+            ox               = 0;
+            oy               = 0;
         }
         
         /**
